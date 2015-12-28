@@ -13,7 +13,7 @@ then
 echo "`date +"%Y-%m-%d %I:%M:%S"` restarting..." >> $OPENSHIFT_DATA_DIR/web_error.log
 /usr/bin/gear stop 2>&1 /dev/null
 /usr/bin/gear start 2>&1 /dev/null
-echo "`date +"%Y-%m-%d %I:%M:%S"` restarted!!!" >> $OPENSHIFT_DATA_DIR/web_error.log
+echo "`date +"%Y-%m-%d %I:%M:%S"` restarted." >> $OPENSHIFT_DATA_DIR/web_error.log
 fi
 else
 echo "`date +"%Y-%m-%d %I:%M:%S"` is ok" > $OPENSHIFT_DATA_DIR/web_run.log

@@ -190,5 +190,25 @@ function checkclass($f,$m = false) {
 			</td>
 			<td>执行签到等</td>
 		</tr>
+        
+        <tr>
+            <td>生成数据库配置文件</td>
+            <td>建议</td>
+            <td>
+                <?php 
+                    require_once autoconfig.php；
+                    autoconfig();
+                    $checkiffileempty = fopen("../config.php","r");
+                    $configresult = fread($configresult,filesize("../config.php"));
+                    if(!empty($configresult)){
+                        echo '<font color="green">成功</font>';
+                    } else {
+                        echo '<font color="red">生成失败，请手动填写数据库信息</font>';
+                    }
+                ?>
+            </td>
+            <td>OpenShift专用，RedL0tus制作</td>
+        </tr>
+                    
 </tbody>
 </table>
