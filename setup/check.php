@@ -196,6 +196,7 @@ function checkclass($f,$m = false) {
             <td>建议</td>
             <td>
                 <?php 
+                    @file_put_contents(SYSTEM_ROOT.'/config.php', '1');
                     require_once autoconfig.php；
                     autoconfig();
                     $checkiffileempty = fopen("../config.php","r");
